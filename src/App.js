@@ -1,4 +1,9 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import { Routes,Route,Link } from 'react-router-dom'
+import HomePage from './pages/Home/index'
+import NewsPage from './pages/News/index'
+import WelcomePage from './pages/Welcome/index';
+
 import './App.css';
 
 // function App() {
@@ -25,13 +30,19 @@ import './App.css';
 // export default App;
 function App() {
   return (
-    <div>
-      <ul>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/news'>News</a></li>
-        <li><a href='/contact'>Contact</a></li>
-      </ul>
+    <div className='App'>
+      {/* <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/news'>News</Link></li>
+        <li><Link to='/contact'>Contact</Link></li>
+      </ul> */}
+      <Routes>
+        <Route path="/" element={ <HomePage/> }/>
+        <Route path="/news" element={ <NewsPage/> }/>
+        <Route path="welcome" element={<WelcomePage/>}/>
+      </Routes>
     </div>
+
   );
 }
 

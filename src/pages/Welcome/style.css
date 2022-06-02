@@ -1,0 +1,18 @@
+.logo{
+    width: 4em;
+    margin-top: 3em;
+}
+.main-title{
+    font-weight: 400;
+}
+.question{
+    margin-top: 1.4em;
+    margin-bottom: 1em;
+    text-align: start;
+    margin-left: 1em;
+    color: #4749A1;
+    font-weight: 700;
+}
+/* .test-button{
+    border-radius: 50%;
+} */
