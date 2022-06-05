@@ -1,0 +1,41 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+.topNav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topNav--left{
+    display: flex;
+    max-width: 40%;
+    justify-content: space-between;
+}
+.sideBarBtn{
+    margin: auto;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+.logo--small{
+    margin:auto;
+    margin-left: 1em;
+    margin-top: 0.2em;
+}
+.logo--text{
+    color: #4749A1;
+    font-size: 2em;
+    margin-left: 0.3em;
+    margin-top: 0.5em;
+}
+
+
+.picture--profile{
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 1em;
+    margin-top: 0.2em;
+}
