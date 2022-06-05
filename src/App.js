@@ -12,13 +12,13 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      {/* <ul>
-        <li><Link to='/'>Home</Link></li>
+      <ul>
+        <li><Link to='/home'>Home</Link></li>
         <li><Link to='/news'>News</Link></li>
         <li><Link to='/welcome'>Welcome</Link></li>
-      </ul> */}
+      </ul>
       {/* <WelcomePage/> */}
-      {/* <HomePage /> */}
+       {/* <HomePage />  */}
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/welcome" element={<WelcomePage/>} />
