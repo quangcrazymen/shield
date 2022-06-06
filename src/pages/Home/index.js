@@ -1,9 +1,26 @@
+import VideoCard from "../../components/VideoCard"
 import sideBarBtn from "../../images/sideBarBtn.png"
 import logo from "../../images/smallLogo.png"
 import profilePicture from "../../images/profilePicture.png"
 import "./style.css"
 // Use htmltagwrap Alt+W
 function Home() {
+    let lessons=[
+        {
+            title:"Bài 1",
+            description:"Gặp người lạ con nên làm thế nào"
+        },
+        {
+            title:"Bài 2",
+            description:"Phân biệt người tốt và người xấu"
+        },
+        {
+            title:"Bài 3",
+            description:"Làm thế nào khi ở nhà một mình"
+        }
+        
+    ]
+
     return (
         <div className="homepage">
             <div className="topNav">
@@ -45,9 +62,15 @@ function Home() {
                         <p className="feature--text">Các khóa học</p>
                     </div>
                 </div>
-                <div className="recently--video">
+                <div className="recently--feature">
+                    <h2>Gần đây</h2>
+                    <p>Xem tất cả</p>
+                </div>
+                <div className="recently--videos">
+                    {
+                        lessons.map(lesson=><VideoCard content={{...lesson}}/>)
+                    }
 
-                    <h1>Content goes here</h1>
                 </div>
             </div>
         </div>

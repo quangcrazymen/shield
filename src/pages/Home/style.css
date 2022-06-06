@@ -63,6 +63,19 @@
     font-weight: 700;
 }
 
-.recently--video{
+.recently--feature{
     margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1em;
 }
+.recently--feature > p{
+    margin-right: 1em;
+    color: #4749A1;
+    padding-top: 0.5em;
+}
+
+/* .recently--videos {
+    display: flex;
+    flex-direction: column;
+} */
