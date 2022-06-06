@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/shield/static/css/main.710f415b.css",
-    "main.js": "/shield/static/js/main.cef61247.js",
+    "main.css": "/shield/static/css/main.49f86b92.css",
+    "main.js": "/shield/static/js/main.1e53fde2.js",
+    "static/media/videoThumbnail1.png": "/shield/static/media/videoThumbnail1.5b3b13a797502cc1a130.png",
     "static/media/logo shield xanh 1.png": "/shield/static/media/logo shield xanh 1.d8877f8ef7c99958dc23.png",
     "index.html": "/shield/index.html",
-    "main.710f415b.css.map": "/shield/static/css/main.710f415b.css.map",
-    "main.cef61247.js.map": "/shield/static/js/main.cef61247.js.map"
+    "main.49f86b92.css.map": "/shield/static/css/main.49f86b92.css.map",
+    "main.1e53fde2.js.map": "/shield/static/js/main.1e53fde2.js.map"
   },
   "entrypoints": [
-    "static/css/main.710f415b.css",
-    "static/js/main.cef61247.js"
+    "static/css/main.49f86b92.css",
+    "static/js/main.1e53fde2.js"
   ]
 }
