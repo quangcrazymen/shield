@@ -3,6 +3,7 @@ import sideBarBtn from "../../images/sideBarBtn.png"
 import logo from "../../images/smallLogo.png"
 import profilePicture from "../../images/profilePicture.png"
 import "./style.css"
+import FooterNav from "../../components/FooterNav"
 // Use htmltagwrap Alt+W
 function Home() {
     let lessons=[
@@ -73,6 +74,7 @@ function Home() {
 
                 </div>
             </div>
+            <FooterNav/>
         </div>
     );
 }

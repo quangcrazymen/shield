@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import { Routes, Route, Link } from 'react-router-dom'
 import HomePage from './pages/Home/index'
-import NewsPage from './pages/News/index'
+import CoursesPage from './pages/Courses/index'
 import WelcomePage from './pages/Welcome/index';
 
 import './App.css';
@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/welcome" element={<WelcomePage/>} />
+        <Route path="/courses" element={<CoursesPage/>} />
         {/* <Route path="welcome" element={<WelcomePage />} /> */}
       </Routes>
     </div>

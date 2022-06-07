@@ -1,7 +1,10 @@
 
 import thumbnail from "../images/videoThumbnail1.png"
 function VideoCard(props) {
-    let {title, description} = props.content
+    let { title, description } = props.content
+    // function handleClick(){
+    //     window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    // }
     return (
         <div className="video--card">
             <div className="thumbnail">

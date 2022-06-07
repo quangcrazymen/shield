@@ -40,4 +40,19 @@
   width: 40vw
 }
 
+/* https://www.geeksforgeeks.org/how-to-create-footer-to-stay-at-the-bottom-of-a-web-page/ */
+.footer--navbar{
+  box-shadow: 0px -1px 52px rgba(0, 0, 0, 0.11);
+  position: fixed;
+  bottom: 0;
+  background-color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer--navbar > svg {
+  margin: auto;
+  height: 4em;
+  background-color: #FFFFFF;
+}
 

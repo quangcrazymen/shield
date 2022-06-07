@@ -1,0 +1,10 @@
+.course--thumbnail{
+    background-color: #FDD2DF;
+    width:80vw;
+    height:90vw;
+    margin: auto;
+}
+
+.course--thumbnail > img{
+    width: inherit;
+}
