@@ -6,20 +6,20 @@ import "./style.css"
 import FooterNav from "../../components/FooterNav"
 // Use htmltagwrap Alt+W
 function Home() {
-    let lessons=[
+    let lessons = [
         {
-            title:"Bài 1",
-            description:"Gặp người lạ con nên làm thế nào"
+            title: "Bài 1",
+            description: "Gặp người lạ con nên làm thế nào"
         },
         {
-            title:"Bài 2",
-            description:"Phân biệt người tốt và người xấu"
+            title: "Bài 2",
+            description: "Phân biệt người tốt và người xấu"
         },
         {
-            title:"Bài 3",
-            description:"Làm thế nào khi ở nhà một mình"
+            title: "Bài 3",
+            description: "Làm thế nào khi ở nhà một mình"
         }
-        
+
     ]
 
     return (
@@ -69,12 +69,15 @@ function Home() {
                 </div>
                 <div className="recently--videos">
                     {
-                        lessons.map(lesson=><VideoCard content={{...lesson}}/>)
+                        lessons.map(lesson => <VideoCard content={{ ...lesson }} />)
                     }
 
                 </div>
             </div>
-            <FooterNav/>
+            <FooterNav />
+            {/* <Router>
+                <Route path="courses" element={<CoursesPage/>} />
+            </Router> */}
         </div>
     );
 }

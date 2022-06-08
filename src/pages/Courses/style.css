@@ -3,6 +3,7 @@
     width:80vw;
     height:90vw;
     margin: auto;
+    border-radius: 20px;
 }
 
 .course--thumbnail > img{
