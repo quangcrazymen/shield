@@ -14,7 +14,6 @@ function App() {
     <div className='App'>
       <ul>
         <li><Link to='/home'>Home</Link></li>
-        <li><Link to='/news'>News</Link></li>
         <li><Link to='/welcome'>Welcome</Link></li>
       </ul>
       {/* <WelcomePage/> */}
