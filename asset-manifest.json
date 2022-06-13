@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shield/static/css/main.3cf82312.css",
-    "main.js": "/shield/static/js/main.8a05b25e.js",
+    "main.css": "/shield/static/css/main.5808ca81.css",
+    "main.js": "/shield/static/js/main.ea2b2e4c.js",
     "static/media/courseThumbnail.png": "/shield/static/media/courseThumbnail.94fe2f3f91a65fd6ab21.png",
     "static/media/videoThumbnail1.png": "/shield/static/media/videoThumbnail1.5b3b13a797502cc1a130.png",
     "static/media/logo shield xanh 1.png": "/shield/static/media/logo shield xanh 1.d8877f8ef7c99958dc23.png",
     "index.html": "/shield/index.html",
-    "main.3cf82312.css.map": "/shield/static/css/main.3cf82312.css.map",
-    "main.8a05b25e.js.map": "/shield/static/js/main.8a05b25e.js.map"
+    "main.5808ca81.css.map": "/shield/static/css/main.5808ca81.css.map",
+    "main.ea2b2e4c.js.map": "/shield/static/js/main.ea2b2e4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cf82312.css",
-    "static/js/main.8a05b25e.js"
+    "static/css/main.5808ca81.css",
+    "static/js/main.ea2b2e4c.js"
   ]
 }
