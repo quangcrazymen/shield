@@ -7,7 +7,7 @@ function Courses() {
         <div>
             <h2>Các khóa học</h2>
             <CourseInfo courseThumbnail={courseThumbnail}/>
-            <button className="viewCourse--btn">XEM BÀI HỌC</button>
+            <Link to="lessons"><button className="viewCourse--btn">XEM BÀI HỌC</button></Link>
             <button className="buyCourse--btn">MUA KHÓA HỌC</button>
         </div>
     );
