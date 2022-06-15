@@ -1,0 +1,43 @@
+.Register {
+    background: #E5E5E5;
+}
+
+.register--backBtn{
+    /* margin-right: 22em;
+    margin-top:1em ; */
+    display: flex;
+    padding: 1em;
+}
+
+.register--title {
+    color: #4749A1;
+    text-align: start;
+    margin-left: 1em;
+}
+
+.register--input {
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: none;
+    padding: 1.5em;
+    width: 80vw;
+    color: black;
+    margin-bottom: 1em;
+}
+
+::placeholder {
+    color: black;
+}
+
+.register--button {
+    background-color: #4749A1;
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    padding: 0.6em;
+    width: 85vw;
+    font-weight:700;
+    font-size: 1.5em;
+    margin: 1em;
+}

@@ -4,7 +4,7 @@ function InfoCard(props) {
     return (
         <div className='info-card'>
             {/* <a href="/home">{props.name}</a> */}
-            <Link className="link-tag" to="/home">{props.name}</Link>
+            <Link className="link-tag" to="/register">{props.name}</Link>
         </div>
         
     );

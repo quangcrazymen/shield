@@ -1,4 +1,5 @@
 // Use htmltagwrap Alt+W
+import {Link} from 'react-router-dom'
 import InfoCard from "../../components/InfoCard";
 import logo from "../../images/logo shield xanh 1.png"
 import "./style.css"
