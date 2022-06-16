@@ -15,21 +15,11 @@
     width: 90vw;
     margin: auto;
     color: #4749A1;
-    padding: 1em;
+    padding: 0.5em 1em;
     box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     font-weight: 700;
-}
-
-.buyCourse--btn {
-    width: 90vw;
-    background: #4749A1;
-    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    color:#FFFFFF;
-    padding: 1em;
-    margin: 1em;
-    font-weight: 700;
+    font-size: 1.2em;
 }
 
 /* 1.(chương 2-3 slide) or 2.(5,6) */

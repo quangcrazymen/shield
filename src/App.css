@@ -56,3 +56,15 @@
   background-color: #FFFFFF;
 }
 
+.longBtn{
+  width: 90vw;
+  background: #4749A1;
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  color:#FFFFFF;
+  padding: 0.8em 1em;
+  margin: 0.5em 1em;
+  font-weight: 700;
+  font-size: 1.2em;
+  border: none;
+}

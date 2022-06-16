@@ -1,27 +1,28 @@
 import { Link } from "react-router-dom"
 import { db } from "../../firebase-config"
-import { collection, getDoc, getDocs } from "firebase/firestore/lite"
+import { collection, getDocs } from "firebase/firestore/lite"
 import VideoCard from "../../components/VideoCard"
 import sideBarBtn from "../../images/sideBarBtn.png"
 import logo from "../../images/smallLogo.png"
 import profilePicture from "../../images/profilePicture.png"
+import heroImage from "../../images/heroImage.png"
 import "./style.css"
 import FooterNav from "../../components/FooterNav"
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react"
 // Use htmltagwrap Alt+W
 function Home() {
 
-    const [lessons,setLessons] = useState([])
-    const lessonsCollectionRef = collection(db,"Courses/Age 3 to 6/Lessons")
+    const [lessons, setLessons] = useState([])
+    const lessonsCollectionRef = collection(db, "Courses/Age 3 to 6/Lessons")
 
 
-    useEffect(()=>{
-        async function getLessons(){
+    useEffect(() => {
+        async function getLessons() {
             const data = await getDocs(lessonsCollectionRef)
-            setLessons(data.docs.map(doc=>({...doc.data(),id:doc.id})))
+            setLessons(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
         }
         getLessons()
-    },[])
+    }, [])
 
     return (
         <div className="homepage">
@@ -35,14 +36,20 @@ function Home() {
             </div>
             <div className="content">
                 <div className="heroImage">
-                    <h5>Giáo dục giới tính</h5>
+                    <div className="heroWrapper">
+                        <h2 className="home--heroTitle">Giáo dục giới tính</h2>
+                        <button className="home--moreInfo">Tìm hiểu thêm</button>
+                    </div>
+                    <img src={heroImage} alt="family"></img>
                 </div>
 
                 <div className="features--bar">
                     <div className="feature--btn">
-                        <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.4134 9.33159L7.77442 0.713004C6.98229 0.243431 6.08321 -0.00255911 5.1685 2.0075e-05C4.25379 0.00259926 3.35603 0.253655 2.56643 0.727689C1.77682 1.20172 1.12348 1.88185 0.672784 2.69898C0.222085 3.51611 -0.00992292 4.44114 0.000325378 5.38011V22.6795C0.000325378 24.0906 0.546362 25.4439 1.51831 26.4417C2.49026 27.4394 3.80851 28 5.18306 28C6.09297 27.9984 6.98654 27.7517 7.77442 27.2844L22.4134 18.6658C23.2 18.1984 23.853 17.527 24.307 16.7187C24.761 15.9105 25 14.9939 25 14.0609C25 13.1279 24.761 12.2113 24.307 11.4031C23.853 10.5949 23.2 9.92339 22.4134 9.45604V9.33159ZM20.898 15.85L6.25901 24.593C5.9309 24.7839 5.5602 24.8842 5.18306 24.8842C4.80592 24.8842 4.43522 24.7839 4.10711 24.593C3.77993 24.3991 3.50824 24.1202 3.31937 23.7843C3.1305 23.4484 3.0311 23.0673 3.03116 22.6795V5.31788C3.0311 4.93004 3.1305 4.54901 3.31937 4.21312C3.50824 3.87722 3.77993 3.59829 4.10711 3.40437C4.43657 3.21637 4.80617 3.11483 5.18306 3.10878C5.55969 3.11672 5.92885 3.21814 6.25901 3.40437L20.898 12.0852C21.2253 12.279 21.4971 12.5579 21.6861 12.8938C21.875 13.2297 21.9745 13.6108 21.9745 13.9987C21.9745 14.3866 21.875 14.7677 21.6861 15.1036C21.4971 15.4395 21.2253 15.7184 20.898 15.9122V15.85Z" fill="#4749A1" />
-                        </svg>
+                        <Link to="/video">
+                            <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.4134 9.33159L7.77442 0.713004C6.98229 0.243431 6.08321 -0.00255911 5.1685 2.0075e-05C4.25379 0.00259926 3.35603 0.253655 2.56643 0.727689C1.77682 1.20172 1.12348 1.88185 0.672784 2.69898C0.222085 3.51611 -0.00992292 4.44114 0.000325378 5.38011V22.6795C0.000325378 24.0906 0.546362 25.4439 1.51831 26.4417C2.49026 27.4394 3.80851 28 5.18306 28C6.09297 27.9984 6.98654 27.7517 7.77442 27.2844L22.4134 18.6658C23.2 18.1984 23.853 17.527 24.307 16.7187C24.761 15.9105 25 14.9939 25 14.0609C25 13.1279 24.761 12.2113 24.307 11.4031C23.853 10.5949 23.2 9.92339 22.4134 9.45604V9.33159ZM20.898 15.85L6.25901 24.593C5.9309 24.7839 5.5602 24.8842 5.18306 24.8842C4.80592 24.8842 4.43522 24.7839 4.10711 24.593C3.77993 24.3991 3.50824 24.1202 3.31937 23.7843C3.1305 23.4484 3.0311 23.0673 3.03116 22.6795V5.31788C3.0311 4.93004 3.1305 4.54901 3.31937 4.21312C3.50824 3.87722 3.77993 3.59829 4.10711 3.40437C4.43657 3.21637 4.80617 3.11483 5.18306 3.10878C5.55969 3.11672 5.92885 3.21814 6.25901 3.40437L20.898 12.0852C21.2253 12.279 21.4971 12.5579 21.6861 12.8938C21.875 13.2297 21.9745 13.6108 21.9745 13.9987C21.9745 14.3866 21.875 14.7677 21.6861 15.1036C21.4971 15.4395 21.2253 15.7184 20.898 15.9122V15.85Z" fill="#4749A1" />
+                            </svg>
+                        </Link>
                         <p className="feature--text">Video</p>
                     </div>
                     <div className="feature--btn">
@@ -72,7 +79,7 @@ function Home() {
                 </div>
                 <div className="recently--videos">
                     {
-                        lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index}/>)
+                        lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index} />)
                     }
 
                 </div>

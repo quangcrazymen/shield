@@ -42,9 +42,32 @@
 
 .heroImage{
     background-color:#FDD2DF;
-    padding:4.5em;
     margin: 0 1.8em;
     border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 28vh;
+}
+.heroImage > img{
+    width:50%;
+    position: absolute;
+    left: 40vw;
+    top: 30vw;
+}
+.heroWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1em;
+    width: 30vw;
+}
+
+.heroWrapper > .home--moreInfo{
+    color: white;
+    background-color: #4749A1;
+    border-radius: 20px;
+    border: none;
+    padding: 0.3em;
 }
 
 .features--bar{
