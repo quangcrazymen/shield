@@ -1,27 +1,27 @@
 import { Link } from "react-router-dom"
+import { db } from "../../firebase-config"
+import { collection, getDoc, getDocs } from "firebase/firestore/lite"
 import VideoCard from "../../components/VideoCard"
 import sideBarBtn from "../../images/sideBarBtn.png"
 import logo from "../../images/smallLogo.png"
 import profilePicture from "../../images/profilePicture.png"
 import "./style.css"
 import FooterNav from "../../components/FooterNav"
+import { useState,useEffect } from "react"
 // Use htmltagwrap Alt+W
 function Home() {
-    let lessons = [
-        {
-            title: "Bài 1",
-            description: "Gặp người lạ con nên làm thế nào"
-        },
-        {
-            title: "Bài 2",
-            description: "Phân biệt người tốt và người xấu"
-        },
-        {
-            title: "Bài 3",
-            description: "Làm thế nào khi ở nhà một mình"
-        }
 
-    ]
+    const [lessons,setLessons] = useState([])
+    const lessonsCollectionRef = collection(db,"Courses/Age 3 to 6/Lessons")
+
+
+    useEffect(()=>{
+        async function getLessons(){
+            const data = await getDocs(lessonsCollectionRef)
+            setLessons(data.docs.map(doc=>({...doc.data(),id:doc.id})))
+        }
+        getLessons()
+    },[])
 
     return (
         <div className="homepage">
@@ -72,7 +72,7 @@ function Home() {
                 </div>
                 <div className="recently--videos">
                     {
-                        lessons.map(lesson => <VideoCard content={{ ...lesson }} />)
+                        lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index}/>)
                     }
 
                 </div>
