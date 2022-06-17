@@ -50,9 +50,6 @@
 }
 .heroImage > img{
     width:50%;
-    position: absolute;
-    left: 40vw;
-    top: 30vw;
 }
 .heroWrapper{
     display: flex;
