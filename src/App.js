@@ -10,6 +10,7 @@ import WelcomePage from './pages/Welcome/index';
 import RegisterPage from './pages/Register/index'
 import LessonsPage from './pages/Lessons';
 import VideoPage from './pages/Video';
+import CommunityPage from './pages/Community';
 import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className='App'>
       <Routes>
+        <Route path="/community" element={<CommunityPage />} />
         <Route path="/shield" element={<WelcomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />

@@ -48,12 +48,12 @@
   background-color: #FFFFFF;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-.footer--navbar > svg {
-  margin: auto;
+  justify-content: space-around;
   height: 4em;
-  background-color: #FFFFFF;
+}
+
+.footer--navbar > div{
+  margin: auto;
 }
 
 .longBtn{

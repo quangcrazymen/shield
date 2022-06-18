@@ -1,5 +1,6 @@
 import { collection, getDocs } from "firebase/firestore/lite"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { db } from "../../firebase-config"
 import VideoCard from "../../components/VideoCard"
 
@@ -19,10 +20,15 @@ function Video() {
         getLessons()
     }, [])
 
-    console.log(currentLesson)
     return (
         <div className="Video">
-            <h1>Video page</h1>
+            <div className='register--backBtn'>
+                <Link to="/home">
+                    <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 18L1 9.5L9.5 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </Link>
+            </div>
 
             <div className="iframe-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/TxtwlOqeg5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
