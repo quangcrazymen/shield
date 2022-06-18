@@ -40,6 +40,13 @@ function Community() {
                 </div>
                 <img className="community--profile" src={profilePicture} alt="profile pic" />
             </div>
+            <input
+                placeholder="Nhập nội dung"
+                onChange={event=>{
+                    setContent(event.target.value)
+                }}
+            ></input>
+            <button onClick={addContent} >Add</button>
             {thread.map(ele => {
                 // const day = (new Date(ele.Time.seconds * 1000)).getDate().toString()
                 // const month = (new Date(ele.Time.seconds * 1000)).getMonth().toString()
@@ -53,13 +60,7 @@ function Community() {
                     </div>
                 )
             })}
-            <input
-                placeholder="Nhập nội dung"
-                onChange={event=>{
-                    setContent(event.target.value)
-                }}
-            ></input>
-            <button onClick={addContent} >Add</button>
+
             <FooterNav />
         </div>
     );

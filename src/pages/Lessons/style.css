@@ -1,9 +1,9 @@
-.Lessons{
+.lessons--header{
     background: #E5E5E5;
 }
 
 .lessons--contents{
     background-color: white;
-    box-shadow: 0px -1px 68px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px -1px 68px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
 }
