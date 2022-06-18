@@ -6,9 +6,10 @@ import sideBarBtn from "../../images/sideBarBtn.png"
 import logo from "../../images/smallLogo.png"
 import profilePicture from "../../images/profilePicture.png"
 import heroImage from "../../images/heroImage.png"
-import "./style.css"
 import FooterNav from "../../components/FooterNav"
 import { useState, useEffect } from "react"
+import "./style.css"
+
 // Use htmltagwrap Alt+W
 function Home() {
 

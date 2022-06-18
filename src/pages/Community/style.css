@@ -1,0 +1,12 @@
+.community--topNav{
+    display: flex;
+}
+.community--topNav > .community--logo{
+    margin: auto;
+}
+.community--topNav > .community--topNavText{
+    width: 75%;
+}
+.community--topNav > .community--profile{
+    margin: auto;
+}
