@@ -40,7 +40,7 @@ function Video() {
                     lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index} />)
                 }
             </div>
-            <button className="longBtn">LUYỆN TẬP</button>
+            <Link to="/game"><button className="longBtn">LUYỆN TẬP</button></Link>
         </div>
     );
 }

@@ -11,6 +11,7 @@ import RegisterPage from './pages/Register/index'
 import LessonsPage from './pages/Lessons';
 import VideoPage from './pages/Video';
 import CommunityPage from './pages/Community';
+import GamePage from './pages/Game'
 import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="home/courses" element={<CoursesPage />} />
         <Route path='home/courses/lessons' element={<LessonsPage />} />
         <Route path='video' element={<VideoPage />} />
+        <Route path='/game' element={<GamePage/>}/>
       </Routes>
 
     </div>

@@ -5,8 +5,21 @@
     margin: auto;
 }
 .community--topNav > .community--topNavText{
-    width: 75%;
+    width: 60%;
 }
 .community--topNav > .community--profile{
     margin: auto;
+}
+.threads--card{
+    display: flex;
+}
+.threads--card > .thread--profile{
+    margin: auto;
+}
+.threads--card > .thread--text{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
 }
