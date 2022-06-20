@@ -1,0 +1,10 @@
+.game--heroImage {
+    width: 80%;
+}
+
+.game--question {
+    background: #FDD2DF;
+    border-radius: 20px;
+    margin: 1em;
+    padding: 0.5em;
+}
