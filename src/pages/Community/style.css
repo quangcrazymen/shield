@@ -23,3 +23,11 @@
     align-items: flex-start;
     text-align: start;
 }
+.tempAddBtn{
+    color: #fff;
+    background-color: #4749A1;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin:0.5em;
+}

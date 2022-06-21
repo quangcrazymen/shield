@@ -46,7 +46,7 @@ function Community() {
                     setContent(event.target.value)
                 }}
             ></input>
-            <button onClick={addContent} >Add</button>
+            <button className="tempAddBtn" onClick={addContent} >Add</button>
             {thread.map(ele => {
                 // const day = (new Date(ele.Time.seconds * 1000)).getDate().toString()
                 // const month = (new Date(ele.Time.seconds * 1000)).getMonth().toString()

@@ -17,13 +17,10 @@ function Video() {
         async function getLessons() {
             const data = await getDocs(lessonsCollectionRef)
             setLessons(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
-            console.log("set lessons ran")
-            console.log(lessons)
         }
         getLessons()
     }, [currentLesson])
 
-    console.log(lessons)
     function changeLesson(index){
         setCurrentLesson("https://www.youtube.com/embed/"+lessons[index-1]["Video"]) 
         setCurrentText(lessons[index-1]["Title"])
