@@ -10,16 +10,25 @@ function Video() {
     //https://stackoverflow.com/questions/30115324/pass-props-in-link-react-router
     const [lessons, setLessons] = useState([])
     const lessonsCollectionRef = collection(db, "Courses/Age 3 to 6/Lessons")
-    const [currentLesson, setCurrentLesson] = useState(lessons[0])
-
+    const [currentLesson, setCurrentLesson] = useState("https://www.youtube.com/embed/T3ImvOn7Mcg")
+    const [currentText, setCurrentText] = useState("Người lạ cho kẹo con nên làm thế nào?")
+    const [currentIndex ,setCurrentIndex] = useState("1")
     useEffect(() => {
         async function getLessons() {
             const data = await getDocs(lessonsCollectionRef)
             setLessons(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+            console.log("set lessons ran")
+            console.log(lessons)
         }
         getLessons()
-    }, [])
+    }, [currentLesson])
 
+    console.log(lessons)
+    function changeLesson(index){
+        setCurrentLesson("https://www.youtube.com/embed/"+lessons[index-1]["Video"]) 
+        setCurrentText(lessons[index-1]["Title"])
+        setCurrentIndex(lessons[index-1]["Index"])
+    }
     return (
         <div className="Video">
             <div className='register--backBtn'>
@@ -31,13 +40,13 @@ function Video() {
             </div>
 
             <div className="iframe-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TxtwlOqeg5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src={currentLesson} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <h3>Bài 1: Gặp người lạ con nên làm thế nào?</h3>
+            <h3>Bài {currentIndex}: {currentText}</h3>
             <p className="video--description">Bé hãy sử dụng những phương pháp đúng đắn để bảo vệ bản thân khi gặp tình huống tương tự nhé! </p>
             <div className="recently--videos">
                 {
-                    lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index} />)
+                    lessons.map(lesson => <VideoCard onClick={changeLesson} content={{ ...lesson }} key={lesson.Index} />)
                 }
             </div>
             <Link to="/game"><button className="longBtn">LUYỆN TẬP</button></Link>

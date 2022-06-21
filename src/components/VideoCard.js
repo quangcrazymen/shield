@@ -14,7 +14,7 @@ function VideoCard(props) {
                 <h3>Bài {Index}</h3>
                 <p>{Title}</p>
             </div>
-            <div className="play--button">
+            <div className="play--button" onClick={()=>props.onClick(Index)}>
                 <Link content={props} to="/video">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.71264 0.633517L23.1002 14.072L0.768342 25.8749L1.71264 0.633517Z" fill="white" />
