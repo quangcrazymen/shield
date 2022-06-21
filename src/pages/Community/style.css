@@ -23,11 +23,56 @@
     align-items: flex-start;
     text-align: start;
 }
+.thread--text > .community--tempName{
+    margin: 0;
+    margin-top: 2em;
+}
+.community--tempDate{
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.community--tempSelectionBar{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+.community--tempParentPage{
+    color: white;
+    background-color: #4749A1;
+    padding: 0.5em 3em;
+    border-radius: 10px;
+
+}
+.community--tempExpertPage{
+    background-color: #ECF0F9;
+    padding: 0.5em 3em;
+    border-radius: 10px;
+}
+
+.community--addContent{
+    position: fixed;
+    bottom: 6em;
+    left: 30vw;
+}
+.tempAddBtn > .stand {
+    position: relative;
+    left: -10px;
+    top: 2px;
+}
+.tempAddBtn > .lie{
+    position: relative;
+    bottom: 6px;
+    left: 2px;
+}
 .tempAddBtn{
     color: #fff;
     background-color: #4749A1;
     border: none;
-    border-radius: 10px;
+    border-radius: 50%;
     padding: 0.5em;
     margin:0.5em;
+    position: fixed;
+    bottom: 4em;
+    left: 80vw;
 }
