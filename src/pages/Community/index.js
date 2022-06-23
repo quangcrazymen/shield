@@ -41,7 +41,7 @@ function Community() {
                 <img className="community--profile" src={profilePicture} alt="profile pic" />
             </div>
             <div className="community--tempSelectionBar">
-                <div className="community--tempParentPage">Phụ huỵnh</div>
+                <div className="community--tempParentPage">Thảo luận</div>
                 <div className="community--tempExpertPage">Chuyên gia</div>
             </div>
             {thread.map(ele => {
