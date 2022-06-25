@@ -1,30 +1,59 @@
-.homepage{
+.homepage {
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
 }
 
-.topNav{
+.topNav {
     display: flex;
     justify-content: space-between;
 }
 
-.topNav--left{
+.topNav--left {
     display: flex;
     max-width: 40%;
     justify-content: space-between;
 }
-.sideBarBtn{
+
+.sidebar {
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    z-index: 1;
+    box-shadow: 0px 0px 163px 61px rgba(0, 0, 0, 0.47);
+}
+
+.sidebar .sidebar--heading {
+    width: 70vw;
+    background: #4749A1;
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 0.8em 1em;
+    margin: 0.5em 1em;
+    font-weight: 700;
+    font-size: 1.2em;
+    border: none;
+}
+
+.sidebar h2{
+    font-weight: 600;
+}
+
+.sideBarBtn {
     margin: auto;
     margin-left: 1em;
     margin-top: 1em;
 }
-.logo--small{
-    margin:auto;
+
+.logo--small {
+    margin: auto;
     margin-left: 1em;
     margin-top: 0.2em;
 }
-.logo--text{
+
+.logo--text {
     color: #4749A1;
     font-size: 2em;
     margin-left: 0.3em;
@@ -32,7 +61,7 @@
 }
 
 
-.picture--profile{
+.picture--profile {
     display: flex;
     justify-content: flex-end;
     margin: auto;
@@ -40,18 +69,20 @@
     margin-top: 0.2em;
 }
 
-.heroImage{
-    background-color:#FDD2DF;
+.heroImage {
+    background-color: #FDD2DF;
     margin: 0 1.8em;
     border-radius: 30px;
     display: flex;
     justify-content: space-between;
     height: 28vh;
 }
-.heroImage > img{
-    width:50%;
+
+.heroImage>img {
+    width: 50%;
 }
-.heroWrapper{
+
+.heroWrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -59,7 +90,7 @@
     width: 30vw;
 }
 
-.heroWrapper > .home--moreInfo{
+.heroWrapper>.home--moreInfo {
     color: white;
     background-color: #4749A1;
     border-radius: 20px;
@@ -67,29 +98,32 @@
     padding: 0.3em;
 }
 
-.features--bar{
+.features--bar {
     display: flex;
     justify-content: space-around;
     margin: 1.5em 1em;
 }
+
 .feature--btn {
-    background-color:#F3F2F1;
-    padding:0.5em;
+    background-color: #F3F2F1;
+    padding: 0.5em;
     border-radius: 50%;
     width: 2em;
     height: 2em;
 }
-.feature--text{
+
+.feature--text {
     font-weight: 700;
 }
 
-.recently--feature{
+.recently--feature {
     margin-top: 4em;
     display: flex;
     justify-content: space-between;
     margin-left: 1em;
 }
-.recently--feature > p{
+
+.recently--feature>p {
     margin-right: 1em;
     color: #4749A1;
     padding-top: 0.5em;

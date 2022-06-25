@@ -14,8 +14,12 @@ import "./style.css"
 function Home() {
 
     const [lessons, setLessons] = useState([])
+    const [sidebar, setSideBar] = useState(false)
     const lessonsCollectionRef = collection(db, "Courses/Age 3 to 6/Lessons")
 
+    const handleClick = () => {
+        setSideBar(prevState => !prevState)
+    }
 
     useEffect(() => {
         async function getLessons() {
@@ -27,9 +31,19 @@ function Home() {
 
     return (
         <div className="homepage">
+            {sidebar && <div className="sidebar">
+                <img className={"sideBarBtn"} src={sideBarBtn} alt="sideBarBtn" onClick={handleClick} />
+                <button className="sidebar--heading">
+                    Khóa học của bạn
+                </button>
+                <h2> 5-8 tuổi</h2>
+                <h2> 9-12 tuổi</h2>
+                <h2> 13-17 tuổi</h2>
+
+            </div>}
             <div className="topNav">
                 <div className="topNav--left">
-                    <img className="sideBarBtn" src={sideBarBtn} alt="sideBarBtn" />
+                    <img className={"sideBarBtn"} src={sideBarBtn} alt="sideBarBtn" onClick={handleClick} />
                     <img className="logo--small" src={logo} alt="Small logo" />
                     <h2 className="logo--text">Shield.</h2>
                 </div>
