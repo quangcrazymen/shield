@@ -37,8 +37,10 @@
     border: none;
 }
 
-.sidebar h2{
+.sidebar .toVideo{
     font-weight: 600;
+    text-decoration: none;
+    color: black;
 }
 
 .sideBarBtn {

@@ -36,9 +36,9 @@ function Home() {
                 <button className="sidebar--heading">
                     Khóa học của bạn
                 </button>
-                <h2> 5-8 tuổi</h2>
-                <h2> 9-12 tuổi</h2>
-                <h2> 13-17 tuổi</h2>
+                <Link className="toVideo" to="/video"><h2> 5-8 tuổi</h2></Link>
+                <Link className="toVideo" to="/video"><h2> 9-12 tuổi</h2></Link>
+                <Link className="toVideo" to="/video"><h2> 13-17 tuổi</h2></Link>
 
             </div>}
             <div className="topNav">
