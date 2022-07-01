@@ -102,9 +102,6 @@ function Home() {
                 </div>
             </div>
             <FooterNav />
-            {/* <Router>
-                <Route path="courses" element={<CoursesPage/>} />
-            </Router> */}
         </div>
     );
 }
