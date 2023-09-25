@@ -8,10 +8,12 @@ import VideoCard from "../../components/VideoCard"
 function Lessons() {
     const [lessons, setLessons] = useState([])
     const lessonsCollectionRef = collection(db, "Courses/Age 3 to 6/Lessons")
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         async function getLessons() {
             const data = await getDocs(lessonsCollectionRef)
             setLessons(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+            setIsLoading(false)
         }
         getLessons()
     }, [])
@@ -31,10 +33,16 @@ function Lessons() {
                 <button className="longBtn">
                     3-6 Tuổi
                 </button>
-                <div className="recently--videos">
-                    {
-                        lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index} />)
-                    }
+                <div>
+                    {isLoading?(
+                        <p>Loading...</p>
+                    ):(
+                        <div className="recently--videos">
+                            {
+                                lessons.map(lesson => <VideoCard content={{ ...lesson }} key={lesson.Index} />)
+                            }
+                        </div>
+                    )}
                 </div>
 
             </div>
